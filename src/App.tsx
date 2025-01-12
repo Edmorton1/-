@@ -11,7 +11,7 @@ function App() {
 
   const [nick, setNick] = useState(nickname)
   
-  function handleInput(e:any, func: Function) {
+  function handleInput(e:number, func:React.Dispatch<React.SetStateAction<number>>) {
    if (e > 46) {
     func(46)
    } else if (e < 1) {
