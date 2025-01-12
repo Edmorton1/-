@@ -8,7 +8,7 @@ input[type="number"]::-webkit-inner-spin-button {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
 body {
-    background: #252525;
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDRwbXMxZm52eWR5NGkzamJxOWYxeHpxZWhqaHA2bDZzdXFoeWN3MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f9jxYYRVPHtKsCf9sy/giphy.webp");
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -65,7 +65,7 @@ input {
 form {
     font-size: 20px;
 }
-button {
+.button {
     color: white;
     border-radius: 5px;
     font-size: 1.6vw;
@@ -83,7 +83,7 @@ button {
     font-family: 'Press Start 2P', sans-serif;
     padding-top: 0.5rem;
 }
-button:hover {
+.button:hover {
     font-size: 1.8vw;
     background-position: left;
 }
@@ -100,55 +100,40 @@ footer {
   a {
       color: white;
   }
-// 900 разрешение край
-@media (max-width: 1523px) {
-    .content {
-        width: 60vw;
-    }
-    button {
-        font-size: 2.8vw;
-    }
-    button:hover {
-        font-size: 3vw;
-    }
-    form {
-        font-size: 2.1vw;
-    }
-    input {
-        width: 2.5vw;
-        height: 2.5vw;
-        font-size: 3vw;
-    }
-    .nick {
-        font-size: 5vw;
-    }
-    .title {
-        font-size: 3vw;
-    }
+  .button-muzon {
+    width: 100%;
+  }
+  audio::-webkit-media-controls-panel {
+    background: none;
+  }
+.inputRange {
+  width: 50%;
+  height: 34px;
+  background: #dfdfdf;
+  border: 5px solid #adadad;
+  -webkit-appearance: none; /* Убираем стандартный стиль ползунка в браузерах */
+  appearance: none;
+  outline: none; /* Убираем контур при фокусе */
 }
-@media (max-width: 900px) {
-    .content {
-        border-radius: 0px;
-        width: 100vw;
-    }
-    button {
-        font-size: 4vw;
-    }
-    button:hover {
-        font-size: 4.2vw;
-    }
-    form {
-        font-size: 4vw;
-    }
-    input {
-        width: 6vw;
-        height: 4vw;
-        font-size: 5vw;
-    }
-    .nick {
-        font-size: 7vw;
-    }
-    .title {
-        font-size: 4vw;
-    }
+.inputRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    border-radius: 10px;
+    height: 44px;
+    background: rgba(255,70,232,1);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .inputRange::-webkit-slider-thumb:hover {
+    background: rgba(135,28,233,1); /* Цвет ползунка */
+  }
+.pauseButton {
+    width: 50%;
+    font-size: 99% !important;
+}
+.control {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
